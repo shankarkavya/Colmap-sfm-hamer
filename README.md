@@ -27,7 +27,11 @@ visualize_rerun.py      → Rerun 3D viewer (dense cloud +  camera trajectory)
 hamer_rerun.py          → 3D hand meshes in world space overlaid on COLMAP scene
 ```
 ---
+3D reconstruction using https://github.com/shankarkavya/3D_reconstruction_using_mastr3_SLAM
 
+![Result](reconstruct.png)
+
+---
 ## Key Results
 
 ### Depth Map
