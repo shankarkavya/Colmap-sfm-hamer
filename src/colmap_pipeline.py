@@ -14,7 +14,7 @@ IMAGE_DIR  = BASE / "rgb_undistorted"   # undistorted images
 DB_PATH    = BASE / "database.db"
 SPARSE_DIR = BASE / "sparse"
 
-# ── Camera intrinsics — PINHOLE on undistorted images ─────────────────────────
+# ── Camera intrinsics - PINHOLE on undistorted images ─────────────────────────
 # fx, fy, cx, cy  (from undistort_images.py output)
 CAMERA_MODEL  = "PINHOLE"
 CAMERA_PARAMS = "638.7274186439614,638.5936105236774,642.252823408419,368.0877567316025"
