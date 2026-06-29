@@ -2,7 +2,7 @@
 
 A full 3D reconstruction pipeline built on top of COLMAP, from raw distorted images to a dense point cloud with animated 3D hand meshes visualized live in [Rerun](https://rerun.io).
 
-![Result](result.png)
+![Result](results.png)
 
 ---
 
