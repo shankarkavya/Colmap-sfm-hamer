@@ -26,21 +26,11 @@ visualize_rerun.py      → Rerun 3D viewer (dense cloud +  camera trajectory)
     ▼
 hamer_rerun.py          → 3D hand meshes in world space overlaid on COLMAP scene
 ```
-
----
-
-
-## Camera
-
-- Resolution: **1280 × 720**
-- Distortion model: `FULL_OPENCV` (rational_polynomial, 8 coefficients)
-- After undistortion: `PINHOLE` `fx=638.73, fy=638.59, cx=642.25, cy=368.09`
-
 ---
 
 ## Key Results
 
-### Depth Map Preview
+### Depth Map
 ![Depth peek](depth_peek.png)
 
 Dense depth maps were computed per-frame by `patch_match_stereo` using geometric consistency across neighbouring views.
@@ -49,13 +39,7 @@ Dense depth maps were computed per-frame by `patch_match_stereo` using geometric
 The fused point cloud (`dense/fused.ply`) was built from depth-map fusion across all registered views via `stereo_fusion`. 
 
 ### HaMeR Hand Meshes
-3D MANO hand meshes are predicted by [HaMeR](https://github.com/geopavlakos/hamer) on each frame and projected into world space using the COLMAP camera-from-world transform:
-
-```
-X_world = R^T @ (X_cam − t)
-```
-
-Each hand accumulates in the Rerun timeline, building up the full hand-motion trajectory across the sequence.
+3D MANO hand meshes are predicted by [HaMeR](https://github.com/geopavlakos/hamer) on each frame and projected into world space.Each hand accumulates in the Rerun timeline, building up the full hand-motion trajectory across the sequence.
 
 ---
 
